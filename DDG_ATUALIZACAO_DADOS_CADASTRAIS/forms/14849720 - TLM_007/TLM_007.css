@@ -1,0 +1,137 @@
+.rowPadding {
+	padding-bottom: 1rem;
+}
+
+.cabecalhoFields {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	flex-wrap: wrap;
+	gap: 4%;
+}
+
+.camposCabecalho {
+	border: none !important;
+	background: transparent !important;
+	font-weight: bold !important;
+	padding: 0 !important;
+	color: #58595b !important;
+}
+
+.toggleHidden {
+	display: none !important;
+}
+
+section .page-header h1 small {
+    font-weight: 600;
+    color: rgb(17, 25, 36);
+}
+
+.fluig-style-guide .custom-radio.custom-radio-xl input[type=radio]+label:before {
+	display: none;
+}
+
+.fluig-style-guide .custom-radio.custom-radio-xl input[type=radio]+label:after {
+    display: none;
+}
+
+.radioDestacadoCinza {
+    border: 1px solid #e4e4e4;
+    padding: 0px;
+    line-height: 1rem;
+    border-radius: 5px;
+    width: 160px;
+    text-align: center;
+}
+
+.radioDestacadoCinza:has(input:checked) {
+    background: #58595b;
+    border: 1px solid #e4e4e4;
+    color: #e4e4e4;
+    padding: 0px;
+    line-height: 1rem;
+    border-radius: 5px;
+    width: 160px;
+    text-align: center;
+}
+
+.radioDestacadoVerde {
+    border: 1px solid #398439;
+    padding: 0px;
+    line-height: 1rem;
+    border-radius: 5px;
+    width: 160px;
+    text-align: center;
+}
+
+.radioDestacadoVerde:has(input:checked) {
+    background: #449d44;
+    border: 1px solid #398439;
+    color: white;
+    padding: 0px;
+    line-height: 1rem;
+    border-radius: 5px;
+    width: 160px;
+    text-align: center;
+}
+
+
+.radioDestacadoLaranja {
+    border: 1px solid #aa8b2a;
+    padding: 0px;
+    line-height: 1rem;
+    border-radius: 5px;
+    width: 160px;
+    text-align: center;
+}
+
+.radioDestacadoLaranja:has(input:checked) {
+    background: #ec971f;
+    border: 1px solid #aa8b2a;
+    color: white;
+    padding: 0px;
+    line-height: 1rem;
+    border-radius: 5px;
+    width: 160px;
+    text-align: center;
+}
+
+.radioDestacadoVermelho {
+    border: 1px solid #aa1818;
+    padding: 0px;
+    line-height: 1rem;
+    border-radius: 5px;
+    width: 160px;
+    text-align: center;
+}
+
+.radioDestacadoVermelho:has(input:checked) {
+    background: #df3131;
+    border: 1px solid #aa1818;
+    color: white;
+    padding: 0px;
+    line-height: 1rem;
+    border-radius: 5px;
+    width: 160px;
+    text-align: center;
+}
+
+.labelRadio {
+    display: block !important;
+    line-height: 2rem !important;
+    margin: 0px !important;
+}
+
+:not(div:has(.radioDestacadoVermelho > input:checked)) + div.row.ajuste {
+	display: none;
+}
+
+.ajuste {
+	padding-top: 2rem;
+}
+
+.bg-danger {
+    font-size: 1.2rem;
+    padding: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+}

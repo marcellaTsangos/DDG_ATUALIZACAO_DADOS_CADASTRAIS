@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_131" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>mecanismo</string>
+   <array class="[Ljava.lang.Object;" length="53">
+    <void index="0">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Solic. Documentos - Almoxarifado</string>
+      </void>
+      <void index="1">
+       <string>al_solic_docs</string>
+      </void>
+     </array>
+    </void>
+    <void index="1">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>AllGruposTI</string>
+      </void>
+      <void index="1">
+       <string>AllGruposTI</string>
+      </void>
+     </array>
+    </void>
+    <void index="2">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Associação</string>
+      </void>
+      <void index="1">
+       <string>Associado</string>
+      </void>
+     </array>
+    </void>
+    <void index="3">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Campo de Formulário</string>
+      </void>
+      <void index="1">
+       <string>Campo Formulário</string>
+      </void>
+     </array>
+    </void>
+    <void index="4">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Participante Diálogo de Segurança</string>
+      </void>
+      <void index="1">
+       <string>dialogoSeguranca_presenca</string>
+      </void>
+     </array>
+    </void>
+    <void index="5">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Solic. Documentos - DP</string>
+      </void>
+      <void index="1">
+       <string>dp_solic_docs</string>
+      </void>
+     </array>
+    </void>
+    <void index="6">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Executor de Atividade</string>
+      </void>
+      <void index="1">
+       <string>Executor Atividade</string>
+      </void>
+     </array>
+    </void>
+    <void index="7">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Grupo</string>
+      </void>
+      <void index="1">
+       <string>Grupo</string>
+      </void>
+     </array>
+    </void>
+    <void index="8">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalAlm</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalAlm</string>
+      </void>
+     </array>
+    </void>
+    <void index="9">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalBenPlanSau</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalBenPlanSau</string>
+      </void>
+     </array>
+    </void>
+    <void index="10">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalDepPesDoc</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalDepPesDoc</string>
+      </void>
+     </array>
+    </void>
+    <void index="11">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalFin</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalFin</string>
+      </void>
+     </array>
+    </void>
+    <void index="12">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalGesAreCel</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalGesAreCel</string>
+      </void>
+     </array>
+    </void>
+    <void index="13">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalNdf</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalNdf</string>
+      </void>
+     </array>
+    </void>
+    <void index="14">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalNdpEntDes</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalNdpEntDes</string>
+      </void>
+     </array>
+    </void>
+    <void index="15">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalNdpTerRec</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalNdpTerRec</string>
+      </void>
+     </array>
+    </void>
+    <void index="16">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalPat</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalPat</string>
+      </void>
+     </array>
+    </void>
+    <void index="17">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalPatAlm</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalPatAlm</string>
+      </void>
+     </array>
+    </void>
+    <void index="18">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalPlaPro</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalPlaPro</string>
+      </void>
+     </array>
+    </void>
+    <void index="19">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalRescisao</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalRescisao</string>
+      </void>
+     </array>
+    </void>
+    <void index="20">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalSesmt</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalSesmt</string>
+      </void>
+     </array>
+    </void>
+    <void index="21">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalTiInf</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalTiInf</string>
+      </void>
+     </array>
+    </void>
+    <void index="22">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>GrupoRegionalTrans</string>
+      </void>
+      <void index="1">
+       <string>GrupoRegionalTrans</string>
+      </void>
+     </array>
+    </void>
+    <void index="23">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Grupos do Colaborador</string>
+      </void>
+      <void index="1">
+       <string>Grupos Colaborador</string>
+      </void>
+     </array>
+    </void>
+    <void index="24">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>MEC.SGI</string>
+      </void>
+      <void index="1">
+       <string>mcAproSgiDoc</string>
+      </void>
+     </array>
+    </void>
+    <void index="25">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Mac.Sgi.Documento</string>
+      </void>
+      <void index="1">
+       <string>mcAprovadoresSGI</string>
+      </void>
+     </array>
+    </void>
+    <void index="26">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Mec.AprovadoresDocumentos-SGI</string>
+      </void>
+      <void index="1">
+       <string>mcAprovDocSGI</string>
+      </void>
+     </array>
+    </void>
+    <void index="27">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>mcInicial</string>
+      </void>
+      <void index="1">
+       <string>mcInicial</string>
+      </void>
+     </array>
+    </void>
+    <void index="28">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>mcLiderFuncionarioViagem</string>
+      </void>
+      <void index="1">
+       <string>mcLiderFuncionarioViagem</string>
+      </void>
+     </array>
+    </void>
+    <void index="29">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Mecanismo Aprovadores SGI</string>
+      </void>
+      <void index="1">
+       <string>McSGIAprovV2</string>
+      </void>
+     </array>
+    </void>
+    <void index="30">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>CSC_Financeiro_Reembolso_Validacao</string>
+      </void>
+      <void index="1">
+       <string>mcValidacaoReembolso</string>
+      </void>
+     </array>
+    </void>
+    <void index="31">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Aprovadores Solicitação de Viagem</string>
+      </void>
+      <void index="1">
+       <string>mcViagemAprovacao</string>
+      </void>
+     </array>
+    </void>
+    <void index="32">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Start Meta Monitoria</string>
+      </void>
+      <void index="1">
+       <string>mec_meta_monitoria</string>
+      </void>
+     </array>
+    </void>
+    <void index="33">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Mecanismo Suporte Estratégico FCA</string>
+      </void>
+      <void index="1">
+       <string>mec_sup_estrategico_fca</string>
+      </void>
+     </array>
+    </void>
+    <void index="34">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Start Monitoria</string>
+      </void>
+      <void index="1">
+       <string>mec_supervisor_monitoria</string>
+      </void>
+     </array>
+    </void>
+    <void index="35">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Mecanismo Adiantamento de Viagem - Início</string>
+      </void>
+      <void index="1">
+       <string>mecanismoAdiantViagem</string>
+      </void>
+     </array>
+    </void>
+    <void index="36">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>mecCustomAprov</string>
+      </void>
+      <void index="1">
+       <string>mecCustomAprov</string>
+      </void>
+     </array>
+    </void>
+    <void index="37">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>mecCustomPromAprovSESMT</string>
+      </void>
+      <void index="1">
+       <string>mecCustomPromAprovSESMT</string>
+      </void>
+     </array>
+    </void>
+    <void index="38">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Mecanismo Lanc. Doc. Fiscal</string>
+      </void>
+      <void index="1">
+       <string>mecFiscalLancDoc</string>
+      </void>
+     </array>
+    </void>
+    <void index="39">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Solic. Documentos - OU</string>
+      </void>
+      <void index="1">
+       <string>ou_solic_docs</string>
+      </void>
+     </array>
+    </void>
+    <void index="40">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Solic. Documentos - Demais Áreas</string>
+      </void>
+      <void index="1">
+       <string>outras_solic_docs</string>
+      </void>
+     </array>
+    </void>
+    <void index="41">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Papel</string>
+      </void>
+      <void index="1">
+       <string>Papel</string>
+      </void>
+     </array>
+    </void>
+    <void index="42">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Solic. Documentos - PC</string>
+      </void>
+      <void index="1">
+       <string>pc_solic_docs</string>
+      </void>
+     </array>
+    </void>
+    <void index="43">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição para um Grupo</string>
+      </void>
+      <void index="1">
+       <string>Pool Grupo</string>
+      </void>
+     </array>
+    </void>
+    <void index="44">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição para um Papel</string>
+      </void>
+      <void index="1">
+       <string>Pool Papel</string>
+      </void>
+     </array>
+    </void>
+    <void index="45">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Solic. Documentos - RB</string>
+      </void>
+      <void index="1">
+       <string>rb_solic_docs</string>
+      </void>
+     </array>
+    </void>
+    <void index="46">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Relatório Fático - Escritório Responsável</string>
+      </void>
+      <void index="1">
+       <string>relat_fatico_escritorio</string>
+      </void>
+     </array>
+    </void>
+    <void index="47">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>RPTransfPromoNDP</string>
+      </void>
+      <void index="1">
+       <string>RPTransfPromoNDP</string>
+      </void>
+     </array>
+    </void>
+    <void index="48">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Solic. Documentos - SESMT</string>
+      </void>
+      <void index="1">
+       <string>se_solic_docs</string>
+      </void>
+     </array>
+    </void>
+    <void index="49">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Start Solicitação de Pagamento</string>
+      </void>
+      <void index="1">
+       <string>startSolicPgto</string>
+      </void>
+     </array>
+    </void>
+    <void index="50">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Solic. Documentos - Transporte</string>
+      </void>
+      <void index="1">
+       <string>tr_solic_docs</string>
+      </void>
+     </array>
+    </void>
+    <void index="51">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>usersProcReparoTelefonia</string>
+      </void>
+      <void index="1">
+       <string>usersProcReparoTelefonia</string>
+      </void>
+     </array>
+    </void>
+    <void index="52">
+     <array class="java.lang.Object" length="2">
+      <void index="0">
+       <string>Atribuição por Usuário</string>
+      </void>
+      <void index="1">
+       <string>Usuário</string>
+      </void>
+     </array>
+    </void>
+   </array>
+  </void>
+ </object>
+</java>

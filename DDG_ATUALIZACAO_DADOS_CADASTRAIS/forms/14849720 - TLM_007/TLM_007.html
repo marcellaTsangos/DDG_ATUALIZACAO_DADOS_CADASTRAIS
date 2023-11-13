@@ -1,0 +1,474 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	
+	<!-- =================================================================================================== -->
+    <!-- CSS DO FORMULARIO -->
+    <!-- =================================================================================================== -->
+    <link rel="stylesheet" href="style/TLM_007.css">
+
+    <!-- =================================================================================================== -->
+    <!-- USAR CONSTRAINTS -->
+    <!-- =================================================================================================== -->
+    <script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+
+    <!-- =================================================================================================== -->
+	<!-- SWEET ALERT 2 -->
+	<!-- =================================================================================================== -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	
+	<!-- =================================================================================================== -->
+    <!-- FILE UPLOAD FLUIG -->
+    <!-- =================================================================================================== -->
+    <script type="text/javascript" src="jquery.fileupload.js"></script>
+	
+</head>
+<body>
+<div class="fluig-style-guide">
+
+<form name="form" role="form">
+
+	<input type="hidden" name="CODPESSOA" id="CODPESSOA" >
+	<input type="hidden" name="GRUPOAPROVACA" id="GRUPOAPROVACAO" >
+    <input type="hidden" name="ERROINTEGRACAO" id="ERROINTEGRACAO" >
+    <input type="hidden" name="SIGLAFILIAL" id="SIGLAFILIAL" >
+    <input type="hidden" name="IDPASTAGED" id="IDPASTAGED" >
+    
+        
+	
+	<!-- INÍCIO: título de cabeçalho -->
+	<div class="page-header">
+	    <div class="row">
+	        <div class="col-xs-12">
+	            <h1 class=""><i class="fas fa-users"></i> Atualização de dados Cadastrais <small class="hidden-xs"></small></h1>
+	        </div>
+	    </div>
+	</div>
+	<!-- FINAL: título de cabeçalho -->
+	
+	<!-- INÍCIO: cabeçalho do formulário -->
+	<section id="painel_tela01" class="toggleHidden">
+	    <div class="row">
+	        <div class="col-xs-12 col-md-9 cabecalhoFields">
+	            <div class="form-group">
+	                <label class="control-label" for="PROTOCOLO">Protocolo</label>
+	                <input type="text" class="form-control camposCabecalho" name="PROTOCOLO" id="PROTOCOLO" readonly>
+	            </div>
+	            <div class="form-group">
+	                <label class="control-label" for="DATAABERTURA">Data de Abertura</label>
+	                <input type="text" class="form-control camposCabecalho" name="DATAABERTURA" id="DATAABERTURA"  readonly>
+	            </div>
+	            <div class="form-group">
+	                <label class="control-label" for="COLIGADA">Coligada</label>
+	                <input type="text" class="form-control camposCabecalho" name="COLIGADA" id="COLIGADA" readonly>
+					<input type="hidden" class="form-control camposCabecalho" name="CODCOLIGADA" id="CODCOLIGADA" readonly>
+	            </div>
+	            <div class="form-group">
+	                <label class="control-label" for="REGIONAL">Regional</label>
+	                <input type="text" class="form-control camposCabecalho" name="REGIONAL" id="REGIONAL" readonly>
+	                <input type="hidden" class="form-control" name="CODREGIONAL" id="CODREGIONAL" readonly>
+	            </div>
+	            <div class="form-group">
+	                <label class="control-label" for="CHAPA">Chapa</label>
+	                <input type="text" class="form-control camposCabecalho" name="CHAPA" id="CHAPA" readonly>
+	            </div>
+	            <div class="form-group">
+	                <label class="control-label" for="FUNCIONARIO">Funcionario</label>
+	                <input type="text" class="form-control camposCabecalho" name="FUNCIONARIO" id="FUNCIONARIO" readonly>
+	            </div>
+	        </div>
+	        <div class="col-xs-12 col-md-3">
+	            <div class="form-group status-solicitacao">
+	                <label class="control-label">Atividade</label>
+	                <input type="text" class="form-control camposCabecalho" name="ATIVIDADE" id="ATIVIDADE" readonly>
+	                <input type="hidden" class="form-control camposCabecalho" name="NUMEROATIVIDADE" id="NUMEROATIVIDADE" readonly>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<!-- FINAL: cabeçalho do formulário -->
+
+
+	
+	<section id="painel_tela02" class="toggleHidden">
+	
+		<div class="page-header">
+            <h1>                       	
+                <i class="far fa-calendar-check" aria-hidden="true"></i> 
+                <small
+                    class="title-small">Dados do Endereço
+                </small>
+            </h1>
+        </div>
+	
+	    <div class="row rowPadding">
+	    
+	    	<div class="col-md-12">
+	    		<p id="alertaAjuste"></p>
+	    	</div>
+	    
+	        <div class="col-md-3">
+	        	<input type="hidden" class="form-control" name="CODTIPORUA" id="CODTIPORUA" />
+                <label for="ZOOMTIPORUA" class="info">Tipo Rua</label><br>
+                <input
+                  type="zoom"
+                  id="ZOOMTIPORUA"
+                  name="ZOOMTIPORUA"
+                  data-zoom="{
+			        	'displayKey':'COD_DESCR',
+			        	'datasetId':'ds_TipoDeRua',
+			        	'placeholder':'Selecione...',
+			        	'fields':[
+			             	{
+			                	'field':'COD_DESCR',
+			             		'label':'Tipo de Rua',
+			             		'standard':'true'
+			           		}
+			            ]
+			      	}"
+                />                
+            </div>
+            
+            <div class="col-md-6">
+                <label for="RUA" class="info">Rua</label><br>
+                <input type="text" class="form-control" name="RUA" id="RUA" />
+            </div>
+            
+            <div class="col-md-3">
+                <label for="NUMERO" class="info">Número</label><br>
+                <input type="text" class="form-control" name="NUMERO" id="NUMERO" mask="9999"/>
+            </div>
+	    </div>
+	    
+	    <div class="row rowPadding">
+	    	<div class="col-md-3">
+	        	<input type="hidden" class="form-control" name="CODTIPOBAIRRO" id="CODTIPOBAIRRO" />
+                <label for="ZOOMTIPOBAIRRO" class="info">Tipo Bairro</label><br>
+                <input
+                  type="zoom"
+                  id="ZOOMTIPOBAIRRO"
+                  name="ZOOMTIPOBAIRRO"
+                  data-zoom="{
+			        	'displayKey':'COD_DESCR',
+			        	'datasetId':'ds_TipoDeBairro',
+			        	'placeholder':'Selecione...',
+			        	'fields':[
+			             	{
+			                	'field':'COD_DESCR',
+			             		'label':'Tipo Bairro',
+			             		'standard':'true'
+			           		}
+			            ]
+			      	}"
+                />                
+            </div>
+            
+            <div class="col-md-3">
+                <label for="BAIRRO" class="info">Bairro</label><br>
+                <input type="text" class="form-control" name="BAIRRO" id="BAIRRO" />
+            </div>
+            
+            <div class="col-md-3">
+                <label for="COMPLEMENTO" class="info">Complemento</label><br>
+                <input type="text" class="form-control" name="COMPLEMENTO" id="COMPLEMENTO" />
+            </div>
+            
+            <div class="col-md-3">
+                <label for="CEP" class="info">CEP</label><br>
+                <input type="text" class="form-control" name="CEP" id="CEP" mask="00000-000"/>
+            </div>
+	    
+	    </div>
+	    
+	    
+	    <div class="row rowPadding">
+	    
+	    	<!--
+	    	<div class="col-md-4">
+	        	<input type="hidden" class="form-control" name="CODPAIS" id="CODPAIS" />
+                <label for="ZOOMPAIS" class="info">Pais</label><br>
+                <input
+                  type="zoom"
+                  id="ZOOMPAIS"
+                  name="ZOOMPAIS"
+                  data-zoom="{
+			        	'displayKey':'NOME',
+			        	'datasetId':'ds_consulta_cadastro_banco',
+			        	'placeholder':'Selecione...',
+			        	'fields':[
+			             	{
+			                	'field':'NOME',
+			             		'label':'Banco',
+			             		'standard':'true'
+			           		}
+			            ]
+			      	}"
+                />                
+            </div>
+            -->
+            
+            <div class="col-md-3">
+	        	<input type="hidden" class="form-control" name="CODESTADO" id="CODESTADO" />
+                <label for="ZOOMESTADO" class="info">Estado</label><br>
+                <input
+                  type="zoom"
+                  id="ZOOMESTADO"
+                  name="ZOOMESTADO"
+                  data-zoom="{
+			        	'displayKey':'COD_DESCR',
+			        	'datasetId':'ds_UF',
+			        	'placeholder':'Selecione...',
+			        	'fields':[
+			             	{
+			                	'field':'COD_DESCR',
+			             		'label':'Estado',
+			             		'standard':'true'
+			           		}
+			            ]
+			      	}"
+                />                
+            </div>
+            
+            <div class="col-md-3">
+	        	<input type="hidden" class="form-control" name="CODMUNICIPIO" id="CODMUNICIPIO" />
+                <label for="ZOOMMUNICIPIO" class="info">Municipio</label><br>
+                <input
+                  type="zoom"
+                  id="ZOOMMUNICIPIO"
+                  name="ZOOMMUNICIPIO"
+                  data-zoom="{
+			        	'displayKey':'COD_DESCR',
+			        	'datasetId':'ds_CodMunicipio',
+			        	'placeholder':'Selecione...',
+			        	'fields':[
+			             	{
+			                	'field':'COD_DESCR',
+			             		'label':'Municipio',
+			             		'standard':'true'
+			           		}
+			            ]
+			      	}"
+                />                
+            </div>
+	    
+	    	<div class="col-md-6">
+	    	
+    		  <div class="row">
+    		  
+	    		  <label for="COMPROVANTE" class="info">&nbsp</label><br>
+	              
+				  
+	
+	              <div class="col-md-6">
+	                <input type="text" class="form-control" name="nomeArquivoComprovante" id="nomeArquivoComprovante" readonly placeholder="Comprovante" style="overflow: hidden"/>
+	              </div>
+	
+				  <div class="col-md-2" data-ocultarqdoview>
+	                <label class="btn btn-primary">
+	                  Incluir
+	                  <input type="file" name="btnAddAnexoComprovante" id="btnAddAnexoComprovante" class="hidden hiddenBtn" data-url="/ecm/upload" />
+	                </label>
+	              </div>
+	
+				  <div class="col-md-2" data-ocultarqdoview>
+	                <a class="btn btn-primary" id="deletarComprovante" name="deletarComprovante" href="#_" onclick="apagarGedWs(this)" value="">Deletar</a>
+	              </div>
+	
+	              <div class="col-md-2" data-ocultarqdoview style="display: none;">
+	                <a class="btn btn-primary" id="visualizarComprovante" name="visualizarComprovante" href="#_" onclick="openDocument(this)" value="">Visualizar</a>
+	                <input type="hidden" name="hid_documentIdComprovante" id="hid_documentIdComprovante" value="" />
+	              </div>
+	
+	              <div class="col-md-2" style="display: none;">
+	                <a class="btn btn-primary" id="btnDwAnexoComprovante" href="undefined" target="_blank" download="" onclick="baixarArquivoUnico(this)">Download</a>
+	              </div>
+    		  
+    		  </div>
+			
+	    	</div>
+	    
+	    </div>
+	    
+	    <div class="row rowPadding">
+	    	<div class="col-md-3" style="display: none"> <!-- campo ocultado conforme solicitação TLMT00060601 -->
+                <label for="TELEFONE" class="info">TELEFONE</label><br>
+                <input type="text" class="form-control" name="TELEFONE" id="TELEFONE" mask="(00) 0000-0000 " />
+            </div>
+            
+            <div class="col-md-3">
+                <label for="CELULAR" class="info">CELULAR</label><br>
+                <input type="text" class="form-control" name="CELULAR" id="CELULAR" mask="(00) 00000-0000 "/>
+            </div>
+            
+            <div class="col-md-3">
+                <label for="EMAIL" class="info">EMAIL PESSOAL</label><br>
+                <input type="email" class="form-control" name="EMAIL" id="EMAIL" />
+            </div>
+            
+	    </div>
+	    
+	    <div class="row rowPadding">
+	    	<div class="col-md-12">
+	    	  <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="modalAceiteLabel"><i class="fluigicon fluigicon-file icon-md"></i> Obrigado por atualizar os seus dados!</h2>
+                </div>
+                <div class="modal-body">
+                  <p>
+                    <strong>Importante! Lembre-se que:</strong> 
+                  </p>
+                  <p>
+                    Você poderá receber em seu e-mail pessoal informado documentos relacionados ao seu contrato de trabalho como por exemplo aviso e recibo de férias.
+                  </p>
+                  <p>
+                    Quando houver necessidade de assinatura digital você deve concluir o processo dentro do prazo informado.
+                  </p>
+                  <p>
+                    Sempre que houver alterações de e-mail, endereço e telefone, você deve atualizar os dados através do "Atualização de dados Cadastrais".
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <h4>Aceite</h4>
+                  <label for="ACEITETERMO" data-dismiss="modal" aria-label="Close">
+                    <input type="checkbox" id="ACEITETERMO" name="ACEITETERMO">
+                    <strong>Li e estou ciente das informações acima.</strong>
+                  </label>
+                    <br>
+                   <label for="ckCienteCNU" id="lbCienteCNU" data-dismiss="modal" aria-label="Close" style="display: none">
+                    <input type="checkbox" id="ckCienteCNU" name="ckCienteCNU">
+                    <strong>Nos casos de inclusão de cônjuge é necessário o envio da Certidão de Casamento ou Escritura pública de União Estável.
+					A inclusão do cônjuge só terá andamento após o envio do documento para o e-mail cscbeneficios@telemont.com.br</strong>
+                  </label>
+                </div>
+              </div>
+	        </div>
+	    </div>
+	   
+	    
+	</section>
+	
+	
+	<section id="painel_tela03" class="toggleHidden">
+		<div class="page-header">
+            <h1>                       	
+                <i class="far fa-calendar-check" aria-hidden="true"></i> 
+                <small
+                    class="title-small">Aprovação
+                </small>
+            </h1>
+        </div>
+        
+	    <div class="row">
+	        <div class="col-md-6">
+   
+                <div class="custom-radio custom-radio-inline custom-radio-primary custom-radio-xl radioDestacadoVerde">
+			        <input type="radio" name="APROVACAODP" value="S" id="APROVACAODPSIM">
+			        <label for="APROVACAODPSIM" style="margin: 0px;" class="labelRadio">SIM</label>
+			    </div>
+			    
+			    <!--
+			    <div class="custom-radio custom-radio-inline custom-radio-primary custom-radio-xl radioDestacadoLaranja">
+			        <input type="radio" name="APROVACAODP" value="A" id="APROVACAODPAJUSTE">
+			        <label for="APROVACAODPAJUSTE" style="margin: 0px;" class="labelRadio">AJUSTE</label>
+			    </div>
+			    -->
+			    <div class="custom-radio custom-radio-inline custom-radio-primary custom-radio-xl radioDestacadoVermelho">
+			        <input type="radio" name="APROVACAODP" value="N" id="APROVACAODPNAO" style="display: none">
+			        <label for="APROVACAODPNAO" style="margin: 0px;" class="labelRadio">NÃO</label>
+			    </div>
+            </div>
+            
+	    </div>
+	    
+	    <div class="row ajuste rowPadding">
+	    	<div class="col-md-12">
+                <label for="AJUSTE" class="info">AJUSTE:</label><br>
+                <input type="text" class="form-control" name="AJUSTE" id="AJUSTE"/>
+            </div>
+	    </div>
+	    
+	</section>
+
+
+	<section id="painel_tela04" class="toggleHidden">
+		<div class="page-header">
+            <h1>                       	
+                <i class="far fa-calendar-check" aria-hidden="true"></i> 
+                <small
+                    class="title-small">Análise erro
+                </small>
+            </h1>
+        </div>
+        
+	    <div class="row rowPadding">
+	        <div class="col-md-6">
+   
+   				<label class="info">NOVA INTEGRAÇÃO?</label><br>
+   
+                <div class="custom-radio custom-radio-inline custom-radio-primary custom-radio-xl radioDestacadoVerde">
+			        <input type="radio" name="NOVAINTEGRACAO" value="S" id="NOVAINTEGRACAOSIM" >
+			        <label for="NOVAINTEGRACAOSIM" class="labelRadio">SIM</label>
+			    </div>
+			    
+			    <div class="custom-radio custom-radio-inline custom-radio-primary custom-radio-xl radioDestacadoVermelho">
+			        <input type="radio" name="NOVAINTEGRACAO" value="N" id="NOVAINTEGRACAONAO">
+			        <label for="NOVAINTEGRACAONAO" class="labelRadio">NÃO</label>
+			    </div>
+			    
+			  
+			   
+            </div>
+	    </div>
+	</section>
+	
+	<section id="painel_tela05" class="toggleHidden">
+		<div class="page-header">
+            <h1>                       	
+                <i class="far fa-calendar-check" aria-hidden="true"></i> 
+                <small
+                    class="title-small">Análise erro (Histórico RM)
+                </small>
+            </h1>
+        </div>
+        
+	    <div class="row rowPadding">
+	        <div class="col-md-6">
+   
+   				<label class="info">NOVA INTEGRAÇÃO?</label><br>
+   
+                <div class="custom-radio custom-radio-inline custom-radio-primary custom-radio-xl radioDestacadoVerde">
+			        <input type="radio" name="NOVAINTEGRACAOHT" value="S" id="NOVAINTEGRACAOHTSIM" >
+			        <label for="NOVAINTEGRACAOHTSIM" class="labelRadio">SIM</label>
+			    </div>
+			    
+			    <div class="custom-radio custom-radio-inline custom-radio-primary custom-radio-xl radioDestacadoVermelho">
+			        <input type="radio" name="NOVAINTEGRACAOHT" value="N" id="NOVAINTEGRACAOHTNAO">
+			        <label for="NOVAINTEGRACAOHTNAO" class="labelRadio">NÃO</label>
+			    </div>
+			  
+            </div>
+	    </div>
+	</section>
+
+	<br>
+	<br>
+	<br>
+
+</form>
+
+</div>
+
+	<script type="text/javascript" src="uploadAnexosUnico.js"></script>
+	<script type="text/javascript" src="utils.js"></script>
+	<script type="text/javascript" src="documentReady.js"></script>
+	<script type="text/javascript" src="exibicaoEFuncionamentoFormulario.js"></script>
+	<script type="text/javascript" src="beforeSendValidate.js"></script>
+	<script type="text/javascript" src="zoom.js"></script>
+	
+	
+</body>
+</html>
