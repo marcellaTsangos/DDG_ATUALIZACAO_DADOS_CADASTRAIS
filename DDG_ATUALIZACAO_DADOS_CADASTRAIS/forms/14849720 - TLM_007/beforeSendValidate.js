@@ -223,7 +223,7 @@ function validarAtividade12(dados, msg){
 		// var celular = document.getElementById("CELULAR").value;
 		// if(isEmpty(celular)) {
 		// 	msg = msg + "[CELULAR], ";
-		// }
+		// } 
 	
 		var email = document.getElementById("EMAIL").value;
 		if(isEmpty(email)) {
