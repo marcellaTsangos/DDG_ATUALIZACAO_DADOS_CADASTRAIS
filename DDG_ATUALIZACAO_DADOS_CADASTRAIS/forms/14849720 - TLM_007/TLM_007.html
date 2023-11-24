@@ -105,7 +105,7 @@
             </h1>
         </div>
 	
-	    <div class="row rowPadding">
+	    <div class="row rowPadding" style="display: none;">
 	    
 	    	<div class="col-md-12">
 	    		<p id="alertaAjuste"></p>
@@ -144,7 +144,7 @@
             </div>
 	    </div>
 	    
-	    <div class="row rowPadding">
+	    <div class="row rowPadding" style="display: none;">
 	    	<div class="col-md-3">
 	        	<input type="hidden" class="form-control" name="CODTIPOBAIRRO" id="CODTIPOBAIRRO" />
                 <label for="ZOOMTIPOBAIRRO" class="info">Tipo Bairro</label><br>
@@ -185,7 +185,7 @@
 	    </div>
 	    
 	    
-	    <div class="row rowPadding">
+	    <div class="row rowPadding" style="display: none;">
 	    
 	    	<!--
 	    	<div class="col-md-4">
@@ -293,7 +293,7 @@
 	    
 	    </div>
 	    
-	    <div class="row rowPadding">
+	    <div class="row rowPadding" style="display: none;">
 	    	<div class="col-md-3" style="display: none"> <!-- campo ocultado conforme solicitação TLMT00060601 -->
                 <label for="TELEFONE" class="info">TELEFONE</label><br>
                 <input type="text" class="form-control" name="TELEFONE" id="TELEFONE" mask="(00) 0000-0000 " />
@@ -304,12 +304,19 @@
                 <input type="text" class="form-control" name="CELULAR" id="CELULAR" mask="(00) 00000-0000 "/>
             </div>
             
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
+                <label for="EMAIL" class="info">EMAIL PESSOAL</label><br>
+                <input type="email" class="form-control" name="EMAIL" id="EMAIL" />
+            </div> -->
+            
+	    </div>
+
+		<div class="row rowPadding">
+			<div class="col-md-3">
                 <label for="EMAIL" class="info">EMAIL PESSOAL</label><br>
                 <input type="email" class="form-control" name="EMAIL" id="EMAIL" />
             </div>
-            
-	    </div>
+		</div>
 	    
 	    <div class="row rowPadding">
 	    	<div class="col-md-12">

@@ -29,7 +29,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Atualização de Dados Cadastrais</processId>
-      <version>9</version>
+      <version>14</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>14849720</formId>
@@ -76,7 +76,7 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>90</positionX>
+      <positionX>70</positionX>
       <positionY>70</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
@@ -579,6 +579,31 @@
         <companyId>1</companyId>
         <processId>TLM_007</processId>
         <version>1</version>
+        <sequence>42</sequence>
+      </processStatePK>
+      <stateName>Envia para RM</stateName>
+      <stateDescription>Envia para RM</stateDescription>
+      <joint>false</joint>
+      <initialState>false</initialState>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <automatic>true</automatic>
+      <positionX>60</positionX>
+      <positionY>190</positionY>
+      <inhibitTransfer>false</inhibitTransfer>
+      <stateType>1</stateType>
+      <bpmnType>120</bpmnType>
+      <signalId>0</signalId>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>TLM_007</processId>
+        <version>1</version>
         <sequence>7</sequence>
       </processStatePK>
       <stateName>Fim</stateName>
@@ -722,7 +747,7 @@
         <companyId>1</companyId>
         <processId>TLM_007</processId>
         <expressionOrder>1</expressionOrder>
-        <version>9</version>
+        <version>14</version>
         <sequence>8</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;APROVACAODP&apos;) == &apos;S&apos;</condition>
@@ -734,7 +759,7 @@
         <companyId>1</companyId>
         <processId>TLM_007</processId>
         <expressionOrder>2</expressionOrder>
-        <version>9</version>
+        <version>14</version>
         <sequence>8</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;APROVACAODP&apos;) == &apos;N&apos;</condition>
@@ -746,7 +771,7 @@
         <companyId>1</companyId>
         <processId>TLM_007</processId>
         <expressionOrder>1</expressionOrder>
-        <version>9</version>
+        <version>14</version>
         <sequence>19</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;NOVAINTEGRACAO&apos;) == &apos;S&apos;</condition>
@@ -758,7 +783,7 @@
         <companyId>1</companyId>
         <processId>TLM_007</processId>
         <expressionOrder>2</expressionOrder>
-        <version>9</version>
+        <version>14</version>
         <sequence>19</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;NOVAINTEGRACAO&apos;) == &apos;N&apos;</condition>
@@ -770,7 +795,7 @@
         <companyId>1</companyId>
         <processId>TLM_007</processId>
         <expressionOrder>1</expressionOrder>
-        <version>9</version>
+        <version>14</version>
         <sequence>29</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;NOVAINTEGRACAOHT&apos;) == &apos;S&apos;</condition>
@@ -782,32 +807,27 @@
         <companyId>1</companyId>
         <processId>TLM_007</processId>
         <expressionOrder>2</expressionOrder>
-        <version>9</version>
+        <version>14</version>
         <sequence>29</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&apos;NOVAINTEGRACAO&apos;) == &apos;N&apos;</condition>
       <destinationSequenceId>37</destinationSequenceId>
       <conditionType>0</conditionType>
     </ConditionProcessState>
-  </list>
-  <list>
-    <ProcessLink>
-      <processLinkPK>
+    <ConditionProcessState>
+      <conditionProcessStatePK>
         <companyId>1</companyId>
         <processId>TLM_007</processId>
-        <version>1</version>
-        <linkSequence>6</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>4</initialStateSequence>
-      <finalStateSequence>5</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <defaultLink>false</defaultLink>
-      <type>0</type>
-    </ProcessLink>
+        <expressionOrder>1</expressionOrder>
+        <version>14</version>
+        <sequence>42</sequence>
+      </conditionProcessStatePK>
+      <condition>true</condition>
+      <destinationSequenceId>15</destinationSequenceId>
+      <conditionType>0</conditionType>
+    </ConditionProcessState>
+  </list>
+  <list>
     <ProcessLink>
       <processLinkPK>
         <companyId>1</companyId>
@@ -1046,6 +1066,57 @@
       <defaultLink>false</defaultLink>
       <type>0</type>
     </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>TLM_007</processId>
+        <version>1</version>
+        <linkSequence>43</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>4</initialStateSequence>
+      <finalStateSequence>42</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>TLM_007</processId>
+        <version>1</version>
+        <linkSequence>44</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>42</initialStateSequence>
+      <finalStateSequence>5</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>TLM_007</processId>
+        <version>1</version>
+        <linkSequence>45</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>42</initialStateSequence>
+      <finalStateSequence>15</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <defaultLink>false</defaultLink>
+      <type>0</type>
+    </ProcessLink>
   </list>
   <list/>
   <list>
@@ -1060,45 +1131,111 @@
 
 	log.info(&quot;TLM_007 - Inicio Integracao - &quot; + hAPI.getCardValue(&quot;PROTOCOLO&quot;))
 
-    var codColigada = hAPI.getCardValue(&quot;CODCOLIGADA&quot;);
-    var dadosFopFuncData = gerarFopFuncData();
-    var dataServerName = &apos;RHUPESSOADATA&apos;;
-    var parametros = [codColigada, dataServerName, JSON.stringify(dadosFopFuncData)];
-    log.info(&apos;*-*-*-*-*-*-*-*TLM_007 PPESSOA: &apos; + JSON.stringify(dadosFopFuncData));
-	
-    var saveRecord = DatasetFactory.getDataset(&apos;ds_RMSaveRecordRetornoSimples&apos;, parametros, null, null);
-    if (saveRecord.getValue(0, &apos;ERRO&apos;) != &apos;0&apos;){
-    	throw String(saveRecord.getValue(0, &apos;DETALHES&apos;))
-    } 
-    
+	var codColigada = hAPI.getCardValue(&quot;CODCOLIGADA&quot;);
+	var dadosFopFuncData = gerarFopFuncData();
+	var dataServerName = &apos;RHUPESSOADATA&apos;;
+	var parametros = [codColigada, dataServerName, JSON.stringify(dadosFopFuncData)];
+	log.info(&apos;*-*-*-*-*-*-*-*TLM_007 PPESSOA: &apos; + JSON.stringify(dadosFopFuncData));
+
+	var saveRecord = DatasetFactory.getDataset(&apos;ds_RMSaveRecordRetornoSimples&apos;, parametros, null, null);
+	if (saveRecord.getValue(0, &apos;ERRO&apos;) != &apos;0&apos;) {
+		throw String(saveRecord.getValue(0, &apos;DETALHES&apos;))
+	}
+
 }
 
 function gerarFopFuncData() {
 
 	var cidadeAux = new String(hAPI.getCardValue(&quot;ZOOMMUNICIPIO&quot;)).toUpperCase();
 	cidadeAux = cidadeAux.split(&apos; - &apos;)[1];
-	
-    var PPESSOA = {
-		
-		CODIGO: new String(hAPI.getCardValue(&quot;CODPESSOA&quot;)).toUpperCase() ,
-		CODTIPORUA: new String(hAPI.getCardValue(&quot;CODTIPORUA&quot;)).toUpperCase(),
-		RUA: new String(hAPI.getCardValue(&quot;RUA&quot;)).toUpperCase(),
-		NUMERO: new String(hAPI.getCardValue(&quot;NUMERO&quot;)).toUpperCase(),
-		CODTIPOBAIRRO: new String(hAPI.getCardValue(&quot;CODTIPOBAIRRO&quot;)).toUpperCase(),
-		BAIRRO: new String(hAPI.getCardValue(&quot;BAIRRO&quot;)).toUpperCase(),
-		COMPLEMENTO: new String(hAPI.getCardValue(&quot;COMPLEMENTO&quot;)).toUpperCase(),
-		CEP: new String(hAPI.getCardValue(&quot;CEP&quot;)).toUpperCase(),
-		IDPAIS: new String(hAPI.getCardValue(&quot;CODCOLIGADA&quot;)).toUpperCase(),
-		ESTADO: new String(hAPI.getCardValue(&quot;CODESTADO&quot;)).toUpperCase(),
-		CODMUNICIPIO: new String(hAPI.getCardValue(&quot;CODMUNICIPIO&quot;)).toUpperCase(),
-		/* TELEFONE1: new String(hAPI.getCardValue(&quot;TELEFONE&quot;)).toUpperCase().replace(/[^0-9]/g, &quot;&quot;), */ //campo ramovido conforme solicitação TLMT00060601
-		TELEFONE2: new String(hAPI.getCardValue(&quot;CELULAR&quot;)).toUpperCase().replace(/[^0-9]/g, &quot;&quot;),
-		EMAILPESSOAL: new String(hAPI.getCardValue(&quot;EMAIL&quot;)).toUpperCase(),
-		CIDADE: cidadeAux
-    	
-    }
 
-    return PPESSOA
+	var PPESSOA = {};
+
+	PPESSOA.CODIGO = new String(hAPI.getCardValue(&quot;CODPESSOA&quot;)).toUpperCase();
+	PPESSOA.EMAILPESSOAL = new String(hAPI.getCardValue(&quot;EMAIL&quot;)).toUpperCase();
+
+	// Verifica se o CODTIPORUA não está vazio antes de adicioná-lo ao objeto
+	var CODTIPORUA = new String(hAPI.getCardValue(&quot;CODTIPORUA&quot;)).toUpperCase();
+	if (CODTIPORUA != &quot;&quot;) {
+		PPESSOA.CODTIPORUA = CODTIPORUA;
+	}
+
+	var RUA = new String(hAPI.getCardValue(&quot;RUA&quot;)).toUpperCase();
+	if (RUA != &quot;&quot;) {
+		PPESSOA.RUA = RUA;
+	}
+
+	var NUMERO = new String(hAPI.getCardValue(&quot;NUMERO&quot;)).toUpperCase();
+	if (NUMERO != &quot;&quot;) {
+		PPESSOA.NUMERO = NUMERO;
+	}
+
+	var CODTIPOBAIRRO = new String(hAPI.getCardValue(&quot;CODTIPOBAIRRO&quot;)).toUpperCase();
+	if (CODTIPOBAIRRO != &quot;&quot;) {
+		PPESSOA.CODTIPOBAIRRO = CODTIPOBAIRRO;
+	}
+
+	var BAIRRO = new String(hAPI.getCardValue(&quot;BAIRRO&quot;)).toUpperCase();
+	if (BAIRRO != &quot;&quot;) {
+		PPESSOA.BAIRRO = BAIRRO;
+	}
+
+	var COMPLEMENTO = new String(hAPI.getCardValue(&quot;COMPLEMENTO&quot;)).toUpperCase();
+	if (COMPLEMENTO != &quot;&quot;) {
+		PPESSOA.COMPLEMENTO = COMPLEMENTO;
+	}
+
+	var CEP = new String(hAPI.getCardValue(&quot;CEP&quot;)).toUpperCase();
+	if (CEP != &quot;&quot;) {
+		PPESSOA.CEP = CEP;
+	}
+
+	var IDPAIS = new String(hAPI.getCardValue(&quot;CODCOLIGADA&quot;)).toUpperCase();
+	if (IDPAIS != &quot;&quot;) {
+		PPESSOA.IDPAIS = IDPAIS;
+	}
+
+	var ESTADO = new String(hAPI.getCardValue(&quot;CODESTADO&quot;)).toUpperCase();
+	if (ESTADO != &quot;&quot;) {
+		PPESSOA.ESTADO = ESTADO;
+	}
+
+	var CODMUNICIPIO = new String(hAPI.getCardValue(&quot;CODMUNICIPIO&quot;)).toUpperCase();
+	if (CODMUNICIPIO != &quot;&quot;) {
+		PPESSOA.CODMUNICIPIO = CODMUNICIPIO;
+	}
+
+	var TELEFONE2 = new String(hAPI.getCardValue(&quot;CELULAR&quot;)).toUpperCase();
+	if (TELEFONE2 != &quot;&quot;) {
+		PPESSOA.TELEFONE2 = TELEFONE2;
+	}
+
+	var CIDADE = cidadeAux;
+	if (CIDADE != &quot;&quot;) {
+		PPESSOA.CIDADE = CIDADE;
+	}
+
+	// var PPESSOA = {
+
+	// 	CODIGO: new String(hAPI.getCardValue(&quot;CODPESSOA&quot;)).toUpperCase(),
+	// 	CODTIPORUA: new String(hAPI.getCardValue(&quot;CODTIPORUA&quot;)).toUpperCase(),
+	// 	RUA: new String(hAPI.getCardValue(&quot;RUA&quot;)).toUpperCase(),
+	// 	NUMERO: new String(hAPI.getCardValue(&quot;NUMERO&quot;)).toUpperCase(),
+	// 	CODTIPOBAIRRO: new String(hAPI.getCardValue(&quot;CODTIPOBAIRRO&quot;)).toUpperCase(),
+	// 	BAIRRO: new String(hAPI.getCardValue(&quot;BAIRRO&quot;)).toUpperCase(),
+	// 	COMPLEMENTO: new String(hAPI.getCardValue(&quot;COMPLEMENTO&quot;)).toUpperCase(),
+	// 	CEP: new String(hAPI.getCardValue(&quot;CEP&quot;)).toUpperCase(),
+	// 	IDPAIS: new String(hAPI.getCardValue(&quot;CODCOLIGADA&quot;)).toUpperCase(),
+	// 	ESTADO: new String(hAPI.getCardValue(&quot;CODESTADO&quot;)).toUpperCase(),
+	// 	CODMUNICIPIO: new String(hAPI.getCardValue(&quot;CODMUNICIPIO&quot;)).toUpperCase(),
+	// 	/* TELEFONE1: new String(hAPI.getCardValue(&quot;TELEFONE&quot;)).toUpperCase().replace(/[^0-9]/g, &quot;&quot;), */ //campo ramovido conforme solicitação TLMT00060601
+	// 	TELEFONE2: new String(hAPI.getCardValue(&quot;CELULAR&quot;)).toUpperCase().replace(/[^0-9]/g, &quot;&quot;),
+	// 	EMAILPESSOAL: new String(hAPI.getCardValue(&quot;EMAIL&quot;)).toUpperCase(),
+	// 	CIDADE: cidadeAux
+
+	// }
+
+	return PPESSOA
 }</eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
@@ -1347,18 +1484,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TLM_007</processId>
-        <version>9</version>
-        <linkSequence>6</linkSequence>
-        <bendSequence>1</bendSequence>
-      </processLinkBendPK>
-      <positionX>107</positionX>
-      <positionY>244</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>TLM_007</processId>
-        <version>9</version>
+        <version>14</version>
         <linkSequence>14</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1369,7 +1495,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TLM_007</processId>
-        <version>9</version>
+        <version>14</version>
         <linkSequence>33</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1380,7 +1506,7 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TLM_007</processId>
-        <version>9</version>
+        <version>14</version>
         <linkSequence>33</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1391,12 +1517,34 @@ process.instructions=</eventDescription>
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TLM_007</processId>
-        <version>9</version>
+        <version>14</version>
         <linkSequence>33</linkSequence>
         <bendSequence>3</bendSequence>
       </processLinkBendPK>
       <positionX>997</positionX>
       <positionY>485</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>TLM_007</processId>
+        <version>14</version>
+        <linkSequence>45</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>89</positionX>
+      <positionY>305</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>TLM_007</processId>
+        <version>14</version>
+        <linkSequence>45</linkSequence>
+        <bendSequence>2</bendSequence>
+      </processLinkBendPK>
+      <positionX>330</positionX>
+      <positionY>305</positionY>
     </ProcessLinkBend>
   </list>
   <list/>
